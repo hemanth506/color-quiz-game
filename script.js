@@ -29,6 +29,7 @@ const toggleMusic = () => {
     "🚀 ~ toggleMusic ~ backgroundMusicAudio.volume:",
     backgroundMusicAudio.volume
   );
+  backgroundMusicAudio.play();
   if (backgroundMusicAudio.volume === 1) {
     backgroundMusicAudio.volume = 0;
     musicButton.style.backgroundColor = "rgb(250, 100, 100)";
@@ -131,7 +132,6 @@ const validateResult = () => {
 };
 
 const generateQuestion = () => {
-  backgroundMusicAudio.play();
   colors = [];
   colorOptionIds.forEach((elementID) => {
     let curDiv = document.getElementById(elementID);
