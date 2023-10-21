@@ -181,3 +181,4 @@ const generateNextQuestion = () => {
 
 // Initial generate
 generateQuestion();
+backgroundMusicAudio.play();
