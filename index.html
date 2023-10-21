@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <title>Color Quiz</title>
+  <link rel="icon" type="image/x-icon" href="assets/brain.ico">
+</head>
+
+<body>
+  <header>
+    <section id="header-nav">
+      <p id="title">Color Quiz</p>
+      <div id="header-options">
+        <button id="music" onclick="toggleMusic()">🎵</button>
+      </div>
+      <audio id="backgroundMusic" src="assets/Wondering(chosic.com).mp3" type="audio/mpeg" loop autoplay>
+      </audio>
+      <audio id="lose-notify" src="assets/lose-notification.mp3" type="audio/mpeg"></audio>
+      <audio id="win-notify" src="assets/win-notification.wav" type="audio/Wave"></audio>
+    </section>
+  </header>
+
+  <main id="main">
+    <section id="landing-content">
+      <span id="landing-card">Welcome to the Color Quiz game</span>
+      <div>
+        <span id="landing-description">This game helps to improve your understanding about the RGB colors and make you
+          fundamentally strong.</span>
+        <span id="landing-content">Have fun while learning, so let's get started</span>
+        <button id="start-button" onclick="goToQuestionsTab()">Start game</button>
+        <div id="rulesReg">
+          <span id="rules">Rules:</span>
+          <ul>
+            <li>⭐ you will receive 15 questions.</li>
+            <li>⭐ To clear this level you should score more that 50%</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div id="question-tab">
+      <section id="question-content">
+        <p id="title-card">Pick the correct color</p>
+        <p id="rgb-code">RGB(<span id="red">245</span>, <span id="green">34</span>, <span id="blue">0</span>)</p>
+        <div id="color-options">
+          <div class="color-div" id="color-div-1" onclick="selectedDiv(this.id)"></div>
+          <div class="color-div" id="color-div-2" onclick="selectedDiv(this.id)"></div>
+          <div class="color-div" id="color-div-3" onclick="selectedDiv(this.id)"></div>
+          <div class="color-div" id="color-div-4" onclick="selectedDiv(this.id)"></div>
+          <div class="color-div" id="color-div-5" onclick="selectedDiv(this.id)"></div>
+          <div class="color-div" id="color-div-6" onclick="selectedDiv(this.id)"></div>
+        </div>
+        <div id="validation-buttons">
+          <button id="submit-button" disabled onclick="validateResult()">Submit</button>
+          <div id="decision">
+            <span id="wrong" class="decision-box">Wrong ✖</span>
+            <span id="correct" class="decision-box">Correct ✔</span>
+          </div>
+          <div id="next-button">
+            <button id="next-question" onclick="generateNextQuestion()" disabled>⮞</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="scoreBoard-tab">
+      <section id="scoreBoard-content">
+        <span id="scoreText"></span>
+      </section>
+    </div>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

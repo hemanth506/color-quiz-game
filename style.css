@@ -1,0 +1,287 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+#title {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 4px 0px;
+}
+
+#header-nav {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header-options > ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 10px;
+}
+
+#header-options > ul > li {
+  padding: 5px;
+}
+
+#music {
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 0.5px solid lightgray;
+  cursor: pointer;
+  background-color: rgb(137, 250, 100);
+
+}
+
+#dropdown {
+  width: 80px;
+  padding: 10px 10px;
+}
+
+#level {
+  font-weight: 500;
+}
+
+.nav-li {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-family: Poppins;
+  background-color: rgb(229, 234, 238);
+}
+
+.nav-li:hover {
+  background-color: rgb(175, 184, 194);
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid green; */
+  /* position: absolute;
+  left: 0;
+  right: 0;
+  top: 1;
+  bottom: 0; */
+}
+
+#landing-content {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  align-items: center;
+  text-align: center;
+}
+
+#landing-card {
+  font-size: 40px;
+  font-weight: 600;
+  padding: 30px 0px;
+}
+
+#landing-content > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 36vw;
+}
+
+#landing-description {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 0px;
+  margin-bottom: 30px;
+  line-height: 35px;
+}
+
+#landing-content {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+#start-button {
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  width: 30vw;
+  font-family: Poppins;
+  margin-bottom: 30px;
+  background-color: rgb(22, 95, 40);
+  color: white;
+}
+
+#start-button:hover {
+  background-color: rgb(155, 224, 172);
+  color: black;
+  cursor: pointer;
+}
+
+#rulesReg {
+  /* border: 1px solid; */
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#rulesReg > ul {
+  display: contents;
+  list-style-type: none
+}
+
+#rules {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+/*  */
+
+#question-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+}
+
+#question-tab {
+  display: none;
+}
+
+#title-card {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#rgb-code {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 8px 10px;
+}
+
+#color-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#red {
+  color: red;
+}
+
+#green {
+  color: rgb(6, 216, 6);
+}
+
+#blue {
+  color: blue;
+}
+
+.color-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+#validation-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+#submit-button {
+  border: none;
+  padding: 5px 18px;
+  font-size: 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  width: 300px;
+  font-family: Poppins;
+  background-color: rgb(229, 234, 238);
+  cursor: not-allowed;
+}
+
+#next-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#next-button > button {
+  border: none;
+  padding: 5px 18px;
+  font-size: 18px;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-weight: 600;
+  cursor: not-allowed;
+  background-color: rgb(229, 234, 238);
+}
+
+#decision {
+  display: flex;
+  justify-content: space-between;
+}
+
+.decision-box {
+  font-weight: 600;
+  margin: 5px 0px;
+  padding: 5px 8px;
+  border-radius: 5px;
+
+  background-color:rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(206, 201, 199);
+}
+
+.wrong-ans {
+  background-color:cornsilk;
+  color: lightsalmon;
+  border: 1px solid lightsalmon;
+}
+
+.correct-ans {
+  background-color: rgb(235, 243, 237);
+  color: rgb(7, 206, 0);
+  border: 1px solid rgb(7, 206, 0);
+}
+
+#scoreBoard-tab {
+  display: none;
+}
+
+#scoreBoard-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 35px;
+  font-weight: 600;
+  width: 50vw;
+  text-align: center;
+}
