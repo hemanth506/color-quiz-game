@@ -25,6 +25,10 @@ const results = {
 };
 
 const toggleMusic = () => {
+  console.log(
+    "🚀 ~ file: script.js:29 ~ toggleMusic ~ backgroundMusicAudio.volume:",
+    backgroundMusicAudio.volume
+  );
   if (backgroundMusicAudio.volume === 1) {
     backgroundMusicAudio.volume = 0;
     musicButton.style.backgroundColor = "rgb(250, 100, 100)";
@@ -157,14 +161,13 @@ const finalScoreBoard = () => {
   const score = Math.floor((results.correct / QUESTION_LIMIT) * 100, 2);
   if (score >= 70) {
     console.log("🚀 ~ >= 70 :", score);
-    scoreText.innerText = `🎉 Walla 🎉\n you have cleared the round by scoring ${score}% 👍🏼`
+    scoreText.innerText = `🎉 Walla 🎉\n you have cleared the round by scoring ${score}% 👍🏼`;
   } else if (score >= 50) {
     console.log("🚀 ~ >= 50 :", score);
-    scoreText.innerText = `🎉 Congrats 👍🏼\n you have cleared the round by scoring ${score}% \n but still practise is required.`
+    scoreText.innerText = `🎉 Congrats 👍🏼\n you have cleared the round by scoring ${score}% \n but still practise is required.`;
   } else {
     console.log("🚀 ~ < 50 :", score);
-    scoreText.innerText = `Sorry 😔\n you have not cleared the round ${score}% 👎🏼\n please try to attempt again!`
-
+    scoreText.innerText = `Sorry 😔\n you have not cleared the round ${score}% 👎🏼\n please try to attempt again!`;
   }
 };
 
