@@ -26,7 +26,7 @@ const results = {
 
 const toggleMusic = () => {
   console.log(
-    "🚀 ~ file: script.js:29 ~ toggleMusic ~ backgroundMusicAudio.volume:",
+    "🚀 ~ toggleMusic ~ backgroundMusicAudio.volume:",
     backgroundMusicAudio.volume
   );
   if (backgroundMusicAudio.volume === 1) {
@@ -131,6 +131,7 @@ const validateResult = () => {
 };
 
 const generateQuestion = () => {
+  backgroundMusicAudio.play();
   colors = [];
   colorOptionIds.forEach((elementID) => {
     let curDiv = document.getElementById(elementID);
@@ -181,4 +182,4 @@ const generateNextQuestion = () => {
 
 // Initial generate
 generateQuestion();
-backgroundMusicAudio.play();
+// 
