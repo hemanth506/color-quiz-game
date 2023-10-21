@@ -46,6 +46,7 @@ console.log(colorOptionIds);
 
 const goToQuestionsTab = () => {
   console.log("Clicked");
+  backgroundMusicAudio.play();
   landingContent.style.display = "none";
   questionTab.style.display = "block";
 };
