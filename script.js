@@ -23,14 +23,13 @@ const results = {
   wrong: 0,
   total: QUESTION_LIMIT,
 };
-const triggerAudio = () => {
-  backgroundMusicAudio.play();
-}
+
 const toggleMusic = () => {
   console.log(
     "🚀 ~ toggleMusic ~ backgroundMusicAudio.volume:",
     backgroundMusicAudio.volume
   );
+  backgroundMusicAudio.play();
   if (backgroundMusicAudio.volume === 1) {
     backgroundMusicAudio.volume = 0;
     musicButton.style.backgroundColor = "rgb(250, 100, 100)";
@@ -183,4 +182,4 @@ const generateNextQuestion = () => {
 
 // Initial generate
 generateQuestion();
-// 
+//
