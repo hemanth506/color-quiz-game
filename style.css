@@ -81,7 +81,9 @@ main {
 }
 
 #landing-card {
-  font-size: 40px;
+  /* font-size: 40px; */
+  font-size: 3.8vw;
+
   font-weight: 600;
   padding: 30px 0px;
 }
@@ -279,4 +281,21 @@ main {
   font-weight: 600;
   width: 50vw;
   text-align: center;
+}
+
+@media screen and (max-width: 840px) {
+  #landing-card {
+    font-size: 40px;
+  }
+  #landing-content {
+    width: 400px
+  }
+
+  #landing-content>div {
+    width: 350px
+  }
+
+  #start-button {
+    width: 200px;
+  }
 }
