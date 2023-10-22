@@ -24,12 +24,11 @@ const results = {
   total: QUESTION_LIMIT,
 };
 
+const triggerBackgroundAudio = () => backgroundMusicAudio.play();
+
 const toggleMusic = () => {
-  console.log(
-    "🚀 ~ toggleMusic ~ backgroundMusicAudio.volume:",
-    backgroundMusicAudio.volume
-  );
-  backgroundMusicAudio.play();
+  console.log("🚀backgroundMusicAudio.volume:", backgroundMusicAudio.volume);
+  triggerBackgroundAudio();
   if (backgroundMusicAudio.volume === 1) {
     backgroundMusicAudio.volume = 0;
     musicButton.style.backgroundColor = "rgb(250, 100, 100)";
@@ -46,7 +45,7 @@ console.log(colorOptionIds);
 
 const goToQuestionsTab = () => {
   console.log("Clicked");
-  backgroundMusicAudio.play();
+  triggerBackgroundAudio();
   landingContent.style.display = "none";
   questionTab.style.display = "block";
 };
