@@ -42,7 +42,6 @@ const colorOptionIds = [
 console.log(colorOptionIds);
 
 const goToQuestionsTab = () => {
-  console.log("Clicked");
   triggerBackgroundAudio();
   landingContent.style.display = "none";
   questionTab.style.display = "block";
@@ -101,7 +100,7 @@ const selectedDiv = (clicked_id) => {
     document.getElementById(previousSelectedDivId).innerHTML = "";
   }
   goBackToOriginalState();
-  console.log("🚀 ~ file: selectedDiv ~ this.id:", clicked_id);
+  console.log("🚀 selectedDiv ~ this.id:", clicked_id);
   selectedDivElt = document.getElementById(clicked_id);
   selectedDivColorValue = selectedDivElt.getAttribute("value");
   selectedDivElt.innerHTML = "✔";
@@ -137,33 +136,26 @@ const generateQuestion = () => {
   goBackToOriginalState();
   generateColorsOptionDiv(colorOptionIds);
   selectedDivElt.innerHTML = "";
-  console.log("🚀 colorOptionIds.forEach ~ colors:", colors);
   index = generateRandomNumber(6);
-  console.log("🚀 ~ file: script.js:47 ~ generateQuestion ~ index:", index);
+  console.log("🚀 script.js:47 ~ generateQuestion ~ index:", index);
   const { redVal, greenVal, blueVal } = colors[index];
   redSpan.innerText = redVal;
   greenSpan.innerText = greenVal;
   blueSpan.innerText = blueVal;
   results.total = results.total - 1;
-  console.log(
-    "🚀 ~ file: script.js:144 ~ generateQuestion ~ results:",
-    results
-  );
 };
 
 const finalScoreBoard = () => {
-  console.log("questions exhaused", results);
+  console.log("🚀 questions exhaused", results);
   questionTab.style.display = "none";
   scoreBoardTab.style.display = "block";
   const score = Math.floor((results.correct / QUESTION_LIMIT) * 100, 2);
+  console.log("🚀 score :", score);
   if (score >= 70) {
-    console.log("🚀 ~ >= 70 :", score);
     scoreText.innerText = `🎉 Walla 🎉\n you have cleared the round by scoring ${score}% 👍🏼`;
   } else if (score >= 50) {
-    console.log("🚀 ~ >= 50 :", score);
     scoreText.innerText = `🎉 Congrats 👍🏼\n you have cleared the round by scoring ${score}% \n but still practise is required.`;
   } else {
-    console.log("🚀 ~ < 50 :", score);
     scoreText.innerText = `Sorry 😔\n you have not cleared the round ${score}% 👎🏼\n please try to attempt again!`;
   }
 };
