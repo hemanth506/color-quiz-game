@@ -1,5 +1,4 @@
 const startBtn = document.getElementById("start-button");
-const colorDiv = document.getElementsByClassName("color-div");
 const landingContent = document.getElementById("landing-content");
 const questionTab = document.getElementById("question-tab");
 const scoreBoardTab = document.getElementById("scoreBoard-tab");
@@ -20,7 +19,6 @@ const scoreText = document.getElementById("scoreText");
 const QUESTION_LIMIT = 15;
 const results = {
   correct: 0,
-  wrong: 0,
   total: QUESTION_LIMIT,
 };
 
@@ -126,7 +124,6 @@ const validateResult = () => {
   } else {
     loseNotify.play();
     wrongMessage.setAttribute("class", "decision-box wrong-ans");
-    results.wrong = results.wrong + 1;
   }
   enableButtonAndChangeState(nextButton);
 };
@@ -155,8 +152,7 @@ const generateQuestion = () => {
 };
 
 const finalScoreBoard = () => {
-  console.log("questions exhaused");
-  console.log(results);
+  console.log("questions exhaused", results);
   questionTab.style.display = "none";
   scoreBoardTab.style.display = "block";
   const score = Math.floor((results.correct / QUESTION_LIMIT) * 100, 2);
@@ -182,4 +178,3 @@ const generateNextQuestion = () => {
 
 // Initial generate
 generateQuestion();
-//

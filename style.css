@@ -22,14 +22,14 @@ header {
   align-items: center;
 }
 
-#header-options > ul {
+#header-options>ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
   margin: 10px;
 }
 
-#header-options > ul > li {
+#header-options>ul>li {
   padding: 5px;
 }
 
@@ -70,12 +70,6 @@ header {
 main {
   display: flex;
   justify-content: center;
-  /* border: 1px solid green; */
-  /* position: absolute;
-  left: 0;
-  right: 0;
-  top: 1;
-  bottom: 0; */
 }
 
 #landing-content {
@@ -92,7 +86,7 @@ main {
   padding: 30px 0px;
 }
 
-#landing-content > div {
+#landing-content>div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,7 +127,6 @@ main {
 }
 
 #rulesReg {
-  /* border: 1px solid; */
   font-size: 15px;
   display: flex;
   flex-direction: column;
@@ -141,7 +134,7 @@ main {
   align-items: flex-start;
 }
 
-#rulesReg > ul {
+#rulesReg>ul {
   display: contents;
   list-style-type: none
 }
@@ -152,7 +145,7 @@ main {
 }
 
 
-/*  */
+/* questions tab */
 
 #question-content {
   display: flex;
@@ -232,7 +225,7 @@ main {
   justify-content: flex-end;
 }
 
-#next-button > button {
+#next-button>button {
   border: none;
   padding: 5px 18px;
   font-size: 18px;
@@ -254,13 +247,13 @@ main {
   padding: 5px 8px;
   border-radius: 5px;
 
-  background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border: 1px solid rgb(206, 201, 199);
 }
 
 .wrong-ans {
-  background-color:cornsilk;
+  background-color: cornsilk;
   color: lightsalmon;
   border: 1px solid lightsalmon;
 }
@@ -270,6 +263,8 @@ main {
   color: rgb(7, 206, 0);
   border: 1px solid rgb(7, 206, 0);
 }
+
+/* Scoreboard tab */
 
 #scoreBoard-tab {
   display: none;
